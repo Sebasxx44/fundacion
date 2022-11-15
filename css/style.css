@@ -316,10 +316,29 @@ nav.close ~ .dashboard .top{
 
 .container-filters form{
     display: flex;
-    padding: 10px;
+    padding: 5px;
     align-items: center;
     font-family: poppins;
+    background-color: #025242;
+}
 
+.container-filters .container-filters-left{
+    display: flex;
+    width: 80%;
+    padding: 5px;
+    align-items: center;
+    font-family: poppins;
+    background-color: #e0f000;
+}
+
+.container-filters .container-filters-right{
+    display: flex;
+    width: 30%;
+    padding: 5px;
+    align-items: center;
+    font-family: poppins;
+    background-color: #0060f0;
+    justify-content: center;
 }
 
 /* Boton Nuevos Usuarios*/
@@ -393,7 +412,7 @@ nav.close ~ .dashboard .top{
 
 .search{
     display: flex;
-    width: 40%;
+    width: 70%;
     align-items: center;
     justify-content: center;
     padding: 5;
@@ -482,7 +501,7 @@ p.encontrados{
     height: 62%;
     background-color: #ffffff;
     width: 99%;
-    margin-left: 0.5%;
+    margin-left: 1%;
     padding: 5px;
     margin-top: 5px;
     overflow: auto;
@@ -992,7 +1011,7 @@ input:focus{
                                         /*SESION ADAPTABLE A TABLET -  750 PIXELES*/
 
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 700px){
 
                         /*SESION ADAPTABLE A TABLET - NAV*/
 
@@ -1026,7 +1045,7 @@ input:focus{
     }
 
     nav ~ .dashboard{
-        left: 70px;
+        left: 71px;
         width: calc(100% - 70px);
     }
 
@@ -1169,8 +1188,9 @@ input:focus{
     /* SESION ADAPTABLE A TABLET - TABLA DE USUARIOS (ADMIN)*/
 
     .container-table{
-        height: 57%;
+        height: 62%;
         margin-top: 20px;
+        margin-left: 1%;
     }
 
     .content-table {

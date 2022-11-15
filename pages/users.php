@@ -118,43 +118,47 @@ session_start();
                 
             <!------------------------------------------------------------------------------------------------->
         <form id="form2" name="form2" method="POST" action="users.php">
+            <div class="container-filters-left"> 
 
 
-            <!--------------------------------------------------------------------------------------------->
-            
-            <!-- FILTRO REGIÓN-->
-            
-            <div class="region">
-                        <select id="assigned-tutor-filter" id="region" name="region">
-                            <?php if ($_POST["region"] != ''){ ?>
-                                <option value="<?php echo $_POST["region"]; ?>"><?php echo $_POST["region"]; ?></option>
-                                <?php } ?>
-                            <option value="">Todos</option>
-                            <option value="pereira">Pereira</option>
-                            <option value="cali">Cali</option>
-                            <option value="dosquebradas">Dosquebradas</option>
-                        </select>
-                    </div>
-                    <!--------------------------------------------------------------------------------------------->
-                    
-                    <!-- FILTRO ESTADO-->
-                    
-                    <div class="state">
-                        <select id="subject-filter" id="state" name="state">
-                            <?php if ($_POST["state"] != ''){ ?>
-                                <option value="<?php echo $_POST["state"]; ?>"><?php echo $_POST["state"]; ?></option>
-                                <?php } ?>
+                <!--------------------------------------------------------------------------------------------->
+                
+                <!-- FILTRO REGIÓN-->
+                
+                    <div class="region">
+                            <select id="assigned-tutor-filter" id="region" name="region">
+                                <?php if ($_POST["region"] != ''){ ?>
+                                    <option value="<?php echo $_POST["region"]; ?>"><?php echo $_POST["region"]; ?></option>
+                                    <?php } ?>
                                 <option value="">Todos</option>
-                                <option value="active">Activo</option>
-                                <option value="inactive">Inactivo</option>
+                                <option value="pereira">Pereira</option>
+                                <option value="cali">Cali</option>
+                                <option value="dosquebradas">Dosquebradas</option>
                             </select>
                         </div>
                         <!--------------------------------------------------------------------------------------------->
-                        <!-- BUSCADOR-->
-            
+                        
+                        <!-- FILTRO ESTADO-->
+                        
+                        <div class="state">
+                            <select id="subject-filter" id="state" name="state">
+                                <?php if ($_POST["state"] != ''){ ?>
+                                    <option value="<?php echo $_POST["state"]; ?>"><?php echo $_POST["state"]; ?></option>
+                                    <?php } ?>
+                                    <option value="">Todos</option>
+                                    <option value="active">Activo</option>
+                                    <option value="inactive">Inactivo</option>
+                            </select>
+                        </div>
+                            <!--------------------------------------------------------------------------------------------->
+                            <!-- BUSCADOR-->
+                
                         <div class="search">
                                 <input type="text" class="form-control" id="buscar" name="buscar" placeholder="Buscar Nombre" value="<?php echo $_POST["buscar"] ?>" >
                         </div>
+
+            </div>
+            <div class="container-filters-right">
                                              
             <!-- BOTON DE BUSQUEDA-->
 
@@ -169,6 +173,7 @@ session_start();
                     <a href="reportes/excel.php"><img src="../img/excel.png" alt=""></a>
                     <!-- <a href="reportes/pdf.php"><img src="../img/pdf.png" alt=""></a> -->
                 </div>
+            </div>
 
     </div>
             <!--------------------------------------------------------------------------------------------->
