@@ -1,0 +1,1296 @@
+*{
+    margin:0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------------------------------------------------------------------------*/
+
+                                                /* SESION - NAVEGATION*/
+
+/*Estilos del container de la barra lateral */
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    padding-top: 10px;
+    background-color: rgb(255, 255, 255);
+    transition: all 300ms ease;
+    border-right: 1px solid rgb(243, 243, 243);
+    font-family: poppins;
+
+}
+
+nav.close{
+    width: 70px;
+}
+
+nav .logo-name{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(241, 240, 240);
+}
+
+nav .logo_name{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-family: poppins;
+    font-weight: 500;
+    width: 170;
+    min-width: 170px;
+}
+
+nav.close .logo_name{
+    opacity: 0;
+    pointer-events: none;
+}
+
+nav .logo-image{
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    min-width: 80px;
+}
+
+nav .logo-image img{
+    width: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/*Estilos del contenido de la barra lateral */
+
+
+nav .menu-items{
+    margin-top: 40px;
+    height: calc(100% - 140px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-items li{
+    list-style: none;
+}
+
+.menu-items li a{
+    text-decoration: none;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    position: relative;
+    margin-left: 5px;
+}
+
+.nav-links li a:hover:before{
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: rgb(0, 116, 67);
+
+}
+
+.menu-items li a i{
+    font-size: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    color: rgb(34, 34, 34);
+    transition: all 300ms ease;
+}
+
+.menu-items li a .link-name{
+    color: rgb(78, 78, 78);
+    font-weight: 400;
+    font-size: 17px;
+    transition: all 300ms ease;
+}
+
+nav.close li a .link-name{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu-items .logout{
+    min-width: 200px;
+}
+
+
+.nav-links li a:hover i,
+.nav-links li a:hover .link-name{
+    color: rgb(1, 114, 90);
+}
+
+
+
+/* ADMIN - DASHBOARD */
+
+.dashboard{
+    position: relative;
+    left: 251px;
+    background-color: rgb(255, 255, 255);
+    width: calc(100% - 251px);
+    height: 100vh;
+    transition: all 300ms ease;
+    padding-top: 1px;
+}
+
+nav.close ~ .dashboard{
+    left: 71px;
+    width: calc(100% - 71px);
+}
+
+.dashboard .top{
+    position: fixed;
+    left: 250px;
+    display: flex;
+    width: calc(100% - 251px);
+    justify-content: space-between;
+    height: 55px;
+    align-items: center;
+    transition: all 300ms ease;
+    background-color: rgb(255, 255, 255);
+    margin-left: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+nav.close ~ .dashboard .top{
+    left: 70px;
+    width: calc(100% - 70px);
+}
+
+.dashboard .top .sidebar-toggle{
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: rgb(138, 138, 138);
+
+}
+
+.top .img-profile{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-profile label{
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+
+}
+
+.img-profile label h3{
+    font-size: 15px;
+    font-family: poppins;
+    font-weight: 400;
+}
+
+.img-profile label img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+
+                                        /*ESTILOS DEL MENU DESPEGABLE*/
+
+
+/*Estilos del container del menu despegable */
+
+.nav-menu{
+    position: fixed;
+    width: 235px;
+    height: 0%;
+    top: 70px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    transition: all 0.2s;
+    z-index: 1;
+    font-family: poppins;
+}
+
+
+.img-correo h1{
+    width: 90%;
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+}
+
+
+.nav-menu li{
+    display: none;
+    line-height: 20px;
+    margin: 50px 0px;
+    transition: all 300ms ease;
+}
+
+.nav-menu .img-correo{
+    padding-top: 10px;
+    margin-top: 0px;
+    height: 30%;
+}
+
+.nav-menu li img{
+    width: 45px;
+    float: left;
+    border-radius: 50%;
+    margin-left: 3px;
+}
+
+
+.nav-menu li a{
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgb(77, 77, 77);
+}
+
+.nav-menu li a i{
+    font-size: 18px;
+    color: #5f5f5f;
+    margin-right: 3px;
+}
+
+.close-sesion a{
+    transition: all 300ms ease;
+}
+
+.close-sesion a:hover{
+    width: 100%;
+    padding: 10px;
+    background-color: #e2e2e2;
+    margin: 0px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+
+#check{
+    display: none;
+}
+
+#check:checked ~ .nav-menu{
+    height: 25vh;
+}
+
+#check:checked ~ .nav-menu li{
+    display: block;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------*/
+
+                                        /* SESION DE LOS FILTROS - ADMIN*/
+
+/* CONTAINER DE LOS FILTROS*/
+
+
+
+.container-filters{
+    display: block;
+    height: 20vh;
+    width: 99.5%;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 60px;
+    font-family: poppins;
+
+}
+
+.container-filters form{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    font-family: poppins;
+
+}
+
+/* Boton Nuevos Usuarios*/
+
+.container-filters .new-user{
+    width: 33.3%;
+    text-align: center;
+}
+
+.new-user button{
+    width: 95%;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    float: right;
+    cursor: pointer;
+    transition: all 0.5s;
+    background-color: #009879;
+    color: white;
+    margin-left: 5%;
+    margin-top: 10px;
+    font-family: poppins;
+
+}
+
+.new-user button:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 5px;
+
+}
+
+.new-user button i{
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+}
+
+/* FILTROS*/
+
+.container-filters .state{
+    width: 15%;
+    padding: 10px;
+}
+
+.container-filters .region{
+    width: 15%;
+    padding: 10px;
+
+}
+
+.container-filters select{
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 4px;
+    width: 100px;
+    font-family: poppins;
+
+ }
+
+ .container-filters select option{
+    font-size: 14px;
+    padding: 4px;
+    font-family: poppins;
+    cursor: pointer;
+ }
+
+
+
+
+/* Buscador*/
+
+.search{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    padding: 5;
+}
+
+.search input{
+    padding: 15px;
+    width: 90%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 10px;
+    border: none;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    background-color: rgb(252, 252, 252);
+    font-family: poppins;
+
+}
+
+.search input:focus{
+    outline-width: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+/* REPORTES*/
+
+.reports{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.reports img{
+    width: 35px;
+    margin-top: 5px;
+}
+
+/* BOTON DE BUSQUEDA*/
+
+
+form .boton_busqueda{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.boton_busqueda input{
+    padding: 10px;
+    width: 80px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 10px;
+    border: none;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    background-color: rgb(252, 252, 252);
+    transition: all 500ms ease;
+    cursor: pointer;
+    font-family: poppins;
+
+}
+
+.boton_busqueda input:hover{
+    background-color: #009879;
+    color: white;
+}
+
+
+p.encontrados{
+    font-size: 18px;
+    color: #025242;
+    font-family: poppins;
+    margin-left:10px;
+    margin-top: 20px;
+
+}
+
+/* ----------------------------------------------------------------------------------------------------------*/
+
+      
+                                        /* CONTENIDO DE TODA LA TABLA DE USUARIOS - (ADMIN)*/
+    /* ESTILOS DE LA TABLA*/
+
+.container-table{
+    height: 62%;
+    background-color: #ffffff;
+    width: 99%;
+    margin-left: 0.5%;
+    padding: 5px;
+    margin-top: 5px;
+    overflow: auto;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.content-table {
+   border-collapse: collapse;
+    font-size: 13px;
+    font-family: poppins;
+    width: 99%;
+    border-radius: 5px 5px 0 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white;
+    margin-top: 4px;
+    margin-left: 0.5%;
+}
+
+.content-table thead{
+    background-color: #009879;
+    height: 8vh;
+    padding: 20px;
+    width: 10%;
+}
+
+.content-table thead tr{
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+
+.content-table th, .content-table td{
+    padding: 10px 10px;
+    font-weight: 500;
+}
+
+.content-table tbody tr{
+    border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color: #f0f0f0;
+}
+
+
+/* Estilos de los botones edit y delete */
+
+.content-table .buttons{
+    display: flex;
+}
+
+
+
+    .mod{
+        width: 35px;
+        height: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #303436;
+        font: 14px cerapro, arial, sans-serif;
+        margin: 2px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+
+    /*Estilo de los iconos edit y delete */
+
+
+    .mod i{
+        color: white;
+        font-size: 15px;
+    }
+
+    .edit{
+        background-color: #f1fa79;
+
+    }
+
+    .edit:hover{
+        background-color: #f4ff57;
+
+    }
+
+    .delete{
+        background-color: #ff2525;
+
+    }
+
+    .delete:hover{
+        background-color: #db1616;
+
+    }
+
+    .resalta_fila{
+        box-shadow: 0 0 3.5px 3.5px rgba(0, 0, 0, 0.1);
+    }
+
+    .img_perfil{
+        width: 40px;
+        height: 40px;
+        border-radius: 131px;
+    }
+
+/* ----------------------------------------------------------------------------------------------------------*/
+
+
+
+                                /* ADMIN - SESION CREAR NUEVO TALLERISTA*/
+
+
+.container-create-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 86vh;
+    margin-top: 60px;
+    font-family: poppins;
+}
+
+.card{
+    background-color: rgb(241, 241, 241);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding: 10px;
+    text-align: center;
+    width: 95%;
+    height: 98%;
+    border-radius: 10px;
+}
+
+.card-create_user-content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card-create_user-content .lado_derecho{
+    width: 50%;
+}
+
+.card-create_user-content .lado_izquierdo{
+    width: 50%;
+}
+
+.form-create_user{
+    margin-top: 10px;
+}
+
+.card .form-group{
+    padding: 3px;
+
+}
+
+.card .form-group h1{
+    width: 100%;
+    font-size: 13px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    float: left;
+}
+
+.card .form-group input{
+    padding: 10px;
+    width: 90%;
+    border: none;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    font-family: poppins;
+}
+
+input:focus{
+    outline-width: 0px;
+    color: rgb(73, 73, 73);
+}
+
+.button-save-user{
+    padding: 5px;
+    width: 150px;
+    height: 40px;
+    background-color: #009879;
+    color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-size: 16px;
+    border-radius: 10px;
+
+}
+
+.button-save-user:hover{
+    background-color: #025242;
+    
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
+
+
+                                                    /*SESION LOGIN*/
+    
+
+
+.container-login{
+    background: linear-gradient(rgba(0, 0, 0,.50) 0%, rgba(0, 0, 0, .50) 100% ), url(../img/educacion_0.jpg);
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+/*Estilos de la card que contiene los inputs*/
+
+.container-card-login{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.card-login{
+    box-sizing: border-box;
+    width: 460px;
+    height: 360px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    margin-top: 200px;
+}
+
+
+/*Estilos de la imagen de la card*/
+
+.img-login{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 27%;
+    
+}
+
+
+.img-login img{
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: 110px;
+    opacity: 1;
+}
+
+/*Estilos de los inputs*/
+
+
+.form-login{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    height: 70%;
+}
+
+
+.form-group-login input{
+    padding: 14px;
+    margin-top: 20px;
+    width: 85%;
+    border: none;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+/*Estilos del link olvidaste tu contraseña*/
+
+
+.forgot-password{
+    margin-top: 10px;
+    width: 60%;
+}
+
+.forgot-password a{
+    text-decoration: none;
+}
+
+.forgot-password a h1{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: #000000;
+}
+
+/*Estilos del boton ingresar*/
+
+
+.button-login{
+    padding: 5px;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(40, 194, 255);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.button-login:hover{
+    background-color: rgb(0, 163, 228);
+
+}
+
+/* SESION HOME ADMIN*/
+
+
+
+.container-content{
+    width: 100%;
+    height: 88vh;
+    margin: auto;
+    background-image: linear-gradient(to top, #00bdff, #89caff, #c1d8ff, #e6eaff, #ffffff);
+    z-index: 0;
+}
+
+.container-cards{
+    display: flex;
+    width: 95%;
+    height: 86vh;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px;
+}
+
+.card-t{
+    background-color: #ffffff;
+    width: 40%;
+    height: 75%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 5px;
+}
+
+.img-card{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 35%;
+}
+
+.img-card img{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 110px;
+}
+
+.card-content{
+    width: 100%;
+    height:65%;
+    align-items: center;
+}
+
+.card-content h1{
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-content button{
+    width: 60%;
+    background-color: #34b5ff;
+    border: none;
+    border-radius: 10px;
+    height: 60px;
+    font-size: 20px;
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card-content button:hover{
+    background-color: #18aaff;
+
+}
+
+
+
+/*Estilos del boton de reportes*/
+
+
+.button-reportes{
+    width: 50%;
+    height: 10vh;
+    padding: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+.button-reportes button{
+    width: 40%;
+    padding: 15px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #5AB0FF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button-reportes button:hover{
+    background: #349dff;
+}
+
+.alert-login{
+    color: #d10000;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+                                    /* SESION TALLERISTAS - INDEX PRINCIPAL TALLERISTAS*/
+
+.container-home_talleristas{
+    height: 87.2vh;
+    display: flex;
+    margin-top: 5px;
+    background-image: linear-gradient(to bottom, #0060f0, #009ef7, #00c5d3, #aae2c8, #fbfdf5);
+}
+
+.card-mis_tallers{
+    position: absolute;
+    width: 30% ;
+    height: 60vh;
+    left: 15%;
+    top: 25%;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background: #FFFFFF;
+
+}
+
+.card-mis_tallers img{
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    left: 30%;
+    top: -60px;
+}
+
+.card-crear_nuevo_taller{
+    position: absolute;
+    width: 30%;
+    height: 60vh;
+    left: 55%;
+    top: 25%;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+.card-crear_nuevo_taller img{
+    position: absolute;
+    width: 43%;
+    height: 50%;
+    left: 30%;
+    top: -60px;
+}
+
+.content-home-talleristas{
+    text-align: center;
+    margin-top: 40%;
+    width: 100%;
+    height: 30vh;
+}
+
+.content-home-talleristas h1{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-home-talleristas button{
+    width: 40%;
+    padding: 12px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #5BE860;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 40px;
+}
+
+                                        /*SESION ADAPTABLE A TABLET -  750 PIXELES*/
+
+
+@media screen and (max-width: 750px){
+
+                        /*SESION ADAPTABLE A TABLET - NAV*/
+
+
+    nav{
+        width: 70px;
+    }
+
+    nav.close{
+        width: 250px;
+    }
+
+    nav .logo_name{
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    nav.close .logo_name{
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    nav li a .link-name{
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    nav.close li a .link-name{
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    nav ~ .dashboard{
+        left: 70px;
+        width: calc(100% - 70px);
+    }
+
+    nav.close ~ .dashboard{
+        left: 250px;
+        width: calc(100% - 250px);
+    }
+
+    nav ~ .dashboard .top{
+        left: 70px;
+        width: calc(100% - 70px);
+    }
+
+    nav.close ~ .dashboard .top{
+        left: 250px;
+        width: calc(100% - 250px);
+    }
+
+    .top .img-profile{
+        width: 20%;
+    }
+
+
+                        /*SESION ADAPTABLE A TABLET - MENU DESPLEGABLE*/
+
+    .nav-menu{
+        margin-right: 110px;
+        width: 220px;
+    }
+
+    .img-correo h1{
+        width: 100%;
+    }
+
+    .nav-menu li{
+        margin-top: 45px;
+    }
+
+
+
+    .logo{
+        width: 150px;
+    }
+    
+    .logo img{
+        width: 100px;
+        padding: 5px;
+    }
+
+
+                        /*SESION ADAPTABLE A TABLET - INDEX PRINCIPAL DEL ADMIN*/
+
+
+    .container-content{
+        height: 150vh;
+    }
+    
+    .container-cards{
+        display: block;
+        width: 98%;
+        padding: 5px;
+    }
+    
+    .card-t{
+        width: 75%;
+        height: 50%;
+        padding: 5px;
+        margin: auto;
+        margin-top: 40px;
+    }
+    
+    .img-card{
+        height: 40%;
+    }
+    
+    .img-card img{
+        width: 100px;
+        height: 100px;
+        top: 90px;
+    }
+
+
+    .card-talleres .img-card img{
+        top: 420px;
+
+    }
+
+    .card-reportes .img-card img{
+        top: 740px;
+    }
+    
+    .card-content{
+        height:60%;
+    }
+    
+    .card-content h1{
+        font-size: 30px;
+    }
+    
+    .card-content button{
+        width: 70%;
+        height: 45px;
+        margin-top: 20px;
+
+    }
+
+                        /*SESION ADAPTABLE A TABLET - CONTAINER FILTERS */
+
+
+
+    /* Boton Nuevos Usuarios*/
+
+    .container-filters{
+        display: block;
+    }
+
+    .container-filters .filters-left{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .container-filters .filters-right{
+        width: 100%;
+    }
+
+
+    .new-user button{
+        width: 96%;
+        padding: 12px;
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+    .new-user button i{
+        font-size: 10px;
+    }
+
+
+
+    /* SESION ADAPTABLE A TABLET - TABLA DE USUARIOS (ADMIN)*/
+
+    .container-table{
+        height: 57%;
+        margin-top: 20px;
+    }
+
+    .content-table {
+         font-size: 12px;
+ 
+     }
+     
+     .content-table thead{
+         padding: 12px;
+     }
+
+                        /* SESION ADAPTABLE A TABLET - CREAR USUARIOS (ADMIN)*/
+
+     
+    
+    .card{
+        background-color: rgb(241, 241, 241);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        padding: 5px;
+        text-align: center;
+        width: 99%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    
+    .card .form-group{
+        padding: 3px;
+    
+    }
+    
+    .card .form-group h1{
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    
+    .card .form-group input{
+        padding: 10px;
+        width: 99%;
+        font-size: 13px;
+    }
+    
+    .button-save-user{
+        padding: 5px;
+        width: 170px;
+    }
+
+}
+
+
+@media screen and (max-width: 500px){
+
+
+                            /*SESION ADAPTABLE A CELULAR - LOGIN DE LA APLICACIÓN*/
+
+    /*SESION ADAPTABLE A TABLET - NAV*/
+
+    nav{
+        width: 60px;
+    }
+
+    nav.close{
+        width: 190px;
+    }
+
+    nav .logo_name{
+        font-size: 14px;
+        width: 120px;
+        min-width: 120px;
+    }
+    
+    nav .logo-image{
+        width: 60px;
+        min-width: 60px;
+    }
+
+    nav .logo-image img{
+        width: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    
+
+    nav ~ .dashboard{
+        left: 60px;
+        width: calc(100% - 60px);
+    }
+
+    nav.close ~ .dashboard{
+        left: 190px;
+        width: calc(100% - 190px);
+    }
+
+    nav ~ .dashboard .top{
+        left: 60px;
+        width: calc(100% - 60px);
+    }
+
+    nav.close ~ .dashboard .top{
+        left: 192px;
+        width: calc(100% - 192px);
+        margin-left: 0px;
+    }
+
+    .menu-items li a i{
+        font-size: 17px;
+        min-width: 50px;
+    }
+
+    .menu-items li a .link-name{
+        font-size: 15px;
+    }
+
+    .top .img-profile{
+        width: 120px;
+    }
+
+                        /*SESION ADAPTABLE A CELULAR - CONTAINER FILTERS */
+
+
+
+
+
+}
