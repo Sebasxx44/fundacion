@@ -21,7 +21,7 @@ session_start();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <!-- Logo de la aplicación-->
-    <link rel="shortcut icon" href="img/LOGO_TDV.png">
+    <link rel="shortcut icon" href="../img/LOGO_TDV.png">
 
     <title>Taller de vida</title>
 </head>
