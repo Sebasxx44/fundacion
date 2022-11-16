@@ -183,27 +183,39 @@ session_start();
 
                 /*FILTRO de busqueda*/
 
+
                 if ($_POST['buscar'] == ''){ $_POST['buscar'] = ' ';}
                     $aKeyword = explode(" ", $_POST['buscar']);
-                
+
+                //SI LOS FILTROS ESTAN VACIOOS, POR DEFECTO SE FILTRARAN TODOS REGISTROS
                 if ($_POST["buscar"] == '' AND $_POST['region'] == '' AND $_POST['state'] == ''){ 
                     $query ="SELECT * FROM users";
 
                 }else{
+
+                // SI EXISTE ALGUN FILTRO, SE BUSCA SI TAMBIEN SE APLICA OTRO FILTRO PARA HACER LA BUSQUEDA
+
                     $query ="SELECT * FROM users ";
 
                 if ($_POST["buscar"] != '' ){ 
                     $query .= "WHERE (name LIKE LOWER('%".$aKeyword[0]."%'))";
                 }
 
-                if ($_POST["region"] != '' ){
+                if (isset($_POST['region'])){
+
+                    if ($_POST["region"] != '' ){
                     $query .= " AND region = '".$_POST['region']."' ";
+                    }
                 }
-                    
-                if ($_POST["state"] != '' ){
-                    $query .= " AND state = '".$_POST["state"]."' ";
-                } 
+
+                if (isset($_POST['state'])){
+
+                    if ($_POST["state"] != '' ){
+                        $query .= " AND state = '".$_POST["state"]."' ";
+                    } 
+                }
             }
+        
 
                 $sql = $conn->query($query);
                 $numeroSql = mysqli_num_rows($sql);
@@ -257,7 +269,7 @@ session_start();
 
                         <td class="buttons">
                             <div class="mod edit"><a href="../controladores/controlador_edit_user.php?id=<?php echo $rowSql['id']?>"><i class="fa-solid fa-pen-to-square"></i></a></div>
-                            <div class="mod delete" onclick="deletePerson()"><a href="../controladores/controlador_delete_user.php?id=<?php echo $rowSql['id']?>"><i class="fa-solid fa-trash"></i></a></div>
+                            <div class="mod delete"><a href="../controladores/controlador_delete_user.php?id=<?php echo $rowSql['id']?>"><i class="fa-solid fa-trash"></i></a></div>
                         </td>
                     </tr>
                

@@ -319,7 +319,6 @@ nav.close ~ .dashboard .top{
     padding: 5px;
     align-items: center;
     font-family: poppins;
-    background-color: #025242;
 }
 
 .container-filters .container-filters-left{
@@ -328,7 +327,6 @@ nav.close ~ .dashboard .top{
     padding: 5px;
     align-items: center;
     font-family: poppins;
-    background-color: #e0f000;
 }
 
 .container-filters .container-filters-right{
@@ -337,7 +335,6 @@ nav.close ~ .dashboard .top{
     padding: 5px;
     align-items: center;
     font-family: poppins;
-    background-color: #0060f0;
     justify-content: center;
 }
 
@@ -455,7 +452,7 @@ nav.close ~ .dashboard .top{
 
 
 form .boton_busqueda{
-    width: 15%;
+    width: 40%;
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -463,13 +460,13 @@ form .boton_busqueda{
 
 .boton_busqueda input{
     padding: 10px;
-    width: 80px;
+    width: 100px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 10px;
     border: none;
     font-size: 15px;
     border-radius: 10px;
     transition: all 0.5s;
-    background-color: rgb(252, 252, 252);
+    background-color: white;
     transition: all 500ms ease;
     cursor: pointer;
     font-family: poppins;
@@ -1011,7 +1008,7 @@ input:focus{
                                         /*SESION ADAPTABLE A TABLET -  750 PIXELES*/
 
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 750px){
 
                         /*SESION ADAPTABLE A TABLET - NAV*/
 
@@ -1158,22 +1155,56 @@ input:focus{
 
     /* Boton Nuevos Usuarios*/
 
-    .container-filters{
+    .container-filters form{
         display: block;
     }
 
-    .container-filters .filters-left{
+    .container-filters .container-filters-left{
         width: 100%;
-        padding: 10px;
+        gap: 10px;
+    }
+    
+    .container-filters .container-filters-right{
+        width: 100%;
+        gap: 10px;
+
     }
 
-    .container-filters .filters-right{
-        width: 100%;
+    .container-filters .state{
+        width: 20%;
+        padding: 10px;
+    }
+    
+    .container-filters .region{
+        width: 20%;
+        padding: 10px;
+    
+    }
+    
+    .container-filters select{
+        font-size: 12px;
+        width: 80px;
+    
+     }
+
+     form .boton_busqueda{
+        width: 50%;
+    }
+    
+    .boton_busqueda input{
+        padding: 10px;
+        width: 200px;
+        font-size: 15px;
+    
+    }
+
+    p.encontrados{
+        margin-top: 50px;
     }
 
 
     .new-user button{
-        width: 96%;
+        width: 97%;
         padding: 12px;
         font-size: 12px;
         margin-left: 20px;
@@ -1188,7 +1219,7 @@ input:focus{
     /* SESION ADAPTABLE A TABLET - TABLA DE USUARIOS (ADMIN)*/
 
     .container-table{
-        height: 62%;
+        height: 60%;
         margin-top: 20px;
         margin-left: 1%;
     }
