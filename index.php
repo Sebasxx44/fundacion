@@ -27,7 +27,7 @@ if(empty($_SESSION['id'])){
                     <span class="link-name">Talleristas</span>
                 </a></li>
 
-                <li><a href="#">
+                <li><a href="pages/talleres.php">
                     <i class="fa-solid fa-book-open"></i>
                     <span class="link-name">Talleres</span>
                 </a></li>

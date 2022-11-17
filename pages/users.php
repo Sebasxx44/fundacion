@@ -4,6 +4,12 @@
 session_start();
 ?>
 
+<?php
+if(empty($_SESSION['id'])){
+    header('Location:../login.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,14 +105,7 @@ session_start();
         <!------------------------------------------------------------------------------------------------->
 
             <?php
-                if (!isset($_POST['buscar'])){$_POST['buscar'] = '';}
-                if (!isset($_POST['buscadepartamento'])){$_POST['buscadepartamento'] = '';}
-                if (!isset($_POST['color'])){$_POST['color'] = '';}
-                if (!isset($_POST['buscafechadesde'])){$_POST['buscafechadesde'] = '';}
-                if (!isset($_POST['buscafechahasta'])){$_POST['buscafechahasta'] = '';}
-                if (!isset($_POST['buscapreciodesde'])){$_POST['buscapreciodesde'] = '';}
-                if (!isset($_POST['buscapreciohasta'])){$_POST['buscapreciohasta'] = '';}
-                if (!isset($_POST["orden"])){$_POST["orden"] = '';}
+            if (!isset($_POST['buscar'])){$_POST['buscar'] = '';}
             ?>
 
     <div class="container-filters">
@@ -150,14 +149,16 @@ session_start();
                                     <option value="inactive">Inactivo</option>
                             </select>
                         </div>
-                            <!--------------------------------------------------------------------------------------------->
-                            <!-- BUSCADOR-->
+                        <!--------------------------------------------------------------------------------------------->
+                        <!-- BUSCADOR-->
                 
                         <div class="search">
-                                <input type="text" class="form-control" id="buscar" name="buscar" placeholder="Buscar Nombre" value="<?php echo $_POST["buscar"] ?>" >
+                            <input type="text" class="form-control" id="buscar" name="buscar" placeholder="Buscar Nombre" value="<?php echo $_POST["buscar"] ?>" >
                         </div>
 
             </div>
+
+                <!---------------------------------------------------------------------------------------------------->
             <div class="container-filters-right">
                                              
             <!-- BOTON DE BUSQUEDA-->
@@ -174,7 +175,6 @@ session_start();
                     <!-- <a href="reportes/pdf.php"><img src="../img/pdf.png" alt=""></a> -->
                 </div>
             </div>
-
     </div>
             <!--------------------------------------------------------------------------------------------->
 
@@ -216,7 +216,6 @@ session_start();
                 }
             }
         
-
                 $sql = $conn->query($query);
                 $numeroSql = mysqli_num_rows($sql);
             ?>
@@ -235,7 +234,7 @@ session_start();
         <table class="content-table">
             <thead>
                 <tr>
-                    <th > Perfil</th>
+                    <th> Perfil</th>
                     <th> Nombre </th>
                     <th> Tipo de docuemento</th>
                     <th> Numero de documento </th>
@@ -269,7 +268,7 @@ session_start();
 
                         <td class="buttons">
                             <div class="mod edit"><a href="../controladores/controlador_edit_user.php?id=<?php echo $rowSql['id']?>"><i class="fa-solid fa-pen-to-square"></i></a></div>
-                            <div class="mod delete"><a href="../controladores/controlador_delete_user.php?id=<?php echo $rowSql['id']?>"><i class="fa-solid fa-trash"></i></a></div>
+                            <div class="mod delete"><a href="../controladores/controlador_delete_user.php?id=<?php echo $rowSql['id']?>"><i class="fa-solid fa-trash"></i></a></div>   
                         </td>
                     </tr>
                
