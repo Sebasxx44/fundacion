@@ -981,22 +981,18 @@ input:focus{
 
                         /*SESION ADAPTABLE A TABLET - CONTAINER FILTERS */
 
-    .conatiner-filters{
-        width: 15vh;
-    }
-
     .container-filters form{
         display: block;
     }
 
     .container-filters .container-filters-left{
         width: 100%;
-        gap: 10px;
+        gap: 5px;
     }
     
     .container-filters .container-filters-right{
         width: 100%;
-        gap: 10px;
+        gap: 5px;
 
     }
 
@@ -1006,7 +1002,7 @@ input:focus{
     }
     
     .container-filters .region{
-        width: 30%;
+        width: 20%;
         padding: 10px;
         margin-left: 30px;
     
@@ -1050,7 +1046,7 @@ input:focus{
     /* SESION ADAPTABLE A TABLET - TABLA DE USUARIOS (ADMIN)*/
 
     .container-table{
-        height: 65%;
+        height: 60%;
         margin-top: 20px;
         margin-left: 1%;
     }
