@@ -6,7 +6,8 @@ include_once ('../databases/db.php');
 
 
 
-//Valido si se esta usando el save_user que viene desde el create_user
+
+                                                //CONTROLADOR SAVE USER
 
 if (isset($_POST['save_user'])){
 

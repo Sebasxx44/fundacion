@@ -380,10 +380,19 @@ nav.close ~ .dashboard .top{
     padding: 10px;
 }
 
+.container-filters .state h1{
+    font-size: 15px;
+    font-weight: 400;
+}
+
 .container-filters .region{
     width: 15%;
     padding: 10px;
+}
 
+.container-filters .region h1{
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .container-filters select{
