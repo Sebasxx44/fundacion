@@ -5,8 +5,8 @@ include_once("../includes/header.php");
 ?>
 
 
-                              <!-- Navegación -->
-<!------------------------------------------------------------------------------------------------->
+<!-- Navegador de la aplicacion-->
+<!---------------------------------------------------------------------------------------------------------->
 
 <nav class="close">
         <div class="logo-name">
@@ -20,7 +20,7 @@ include_once("../includes/header.php");
 
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="users.php">
+                <li><a href="#">
                     <i class="fa-solid fa-users"></i>
                     <span class="link-name">Talleristas</span>
                 </a></li>
@@ -69,46 +69,63 @@ include_once("../includes/header.php");
             </div>
         </div>
 
+<!----------------------------------------------------------------------------------------------------------------->
+
+<?php
+
+if (isset($_GET['id'])){
+
+    $id = $_GET['id'];
+
+    $query = "SELECT * FROM talleres WHERE id = $id";
+    $result = mysqli_query($conn,$query);
+
+    if(mysqli_num_rows($result) == 1){
+
+        $row = mysqli_fetch_array($result);
+
+        $name = $row['name'];
+        $created_for = $row['created_for'];
+        $region = $row['region'];
+        $participantes = $row['participantes'];
+        $description = $row['description'];
+
+    }
+
+}
+
+?>
 
 <!---------------------------------------------------------------------------------------------------------->
 
-
-
-<!-- Creo un formulario que va a contener todos los inputs en donde se va a diligenciar la información correspondiente-->
-<!------------------------------------------------------------------------------------------------------------------------>
-
 <div class="container-create-user">
-    <?php include_once("../controladores/controlador_save.php")?>
     <div class="card">
 
-        <form  class="form-create_user"action="../controladores/controlador_save.php" method="POST">
+    <!-- Creo un formulario que va a contener todos los inputs en donde se va a editar la información-->
 
-    <div class="card-create_user-content">
+        <form  class="form-create_user" action="../controladores/controlador_edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
+
+        <div class="card-create_user-content">
         <div class="lado_derecho ">
 
             <div class="form-group">
                 <h1>Nombre</h1>
-                <input type="text" name="name" placeholder="Nombre" class="form-name" autofocus>
+                <input type="text" name="name" placeholder="Nombre" class="form-name" value="<?php echo $name?>">
             </div>
 
             <div class="form-group">
-                <h1>Tipo de documento</h1>
-                <input type="text" name="type_document" placeholder="Tipo de documento" class="form-document-type">
-            </div>
-
-            <div class="form-group">
-                <h1>Numero de documento</h1>
-                <input type="text" name="number_document" placeholder="Numero de documento" class="form-document-number">
+                <h1>Creado Por</h1>
+                <input type="text" name="created_for" placeholder="Creado Por" value="<?php echo $created_for?>">
             </div>
 
             <div class="form-group">
                 <h1>Región</h1>
-                <input type="text" name="region" placeholder="Región" class="form-region">
+                <input type="text" name="region" placeholder="Región" value="<?php echo $region?>">
             </div>
 
             <div class="form-group">
-                <h1>Fecha de nacimiento</h1>
-                <input type="text" name="date_of_birth" placeholder="Fecha de nacimiento" class="form-date_of_birth">
+                <h1>Participantes</h1>
+                <input type="text" name="participantes" placeholder="Participantes" value="<?php echo $participantes?>">
             </div>
 
         </div>
@@ -116,30 +133,9 @@ include_once("../includes/header.php");
 
         <div class="lado_izquierdo">
 
-
             <div class="form-group">
-                <h1>Genero</h1>
-                <input type="text" name="gender" placeholder="Genero" class="form-gender">
-            </div>
-
-            <div class="form-group">
-                <h1>Email</h1>
-                <input type="text" name="email" placeholder="Email" class="form-email">
-            </div>
-
-            <div class="form-group">
-                <h1>Contacto</h1>
-                <input type="text" name="contact" placeholder="Numero de contacto" class="form-contact">
-            </div>
-
-            <div class="form-group">
-                <h1>Contraseña</h1>
-                <input type="text" name="password" placeholder="password" class="form-password">
-            </div>
-
-            <div class="form-group">
-                <h1>Role</h1>
-                <input type="text" name="role" placeholder="role - 1 [Administrador] , 2 [Tallerista]" class="form-password">
+                <h1>Añadir descripción</h1>
+                <input type="text" name="description" placeholder=" Añade una breve descripción sobre el taller realizado" value="<?php echo $description?>">
             </div>
 
         </div>
@@ -147,16 +143,15 @@ include_once("../includes/header.php");
 
             <!-- Input que va a accionar el metodo post para hacer el guardado en la base de datos-->
 
-            <input type="submit" class="button-save-user" name="save_user" value="Confirmar">
+            <input type="submit" class="button-save-user" name="update_taller" value="Confirmar cambios">
 
         </form>
     </div>
 </div>
-
-<!---------------------------------------------------------------------------------------------------------->
-
-
+</section>
 
 
 <script src="../js/js.js"></script>
-<?php include("../includes/footer.php");?>
+<?php include('../includes/footer.php')?>
+
+
