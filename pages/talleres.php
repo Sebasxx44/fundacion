@@ -102,7 +102,7 @@ session_start();
             <!-- BOTON PARA AGREGAR UN NUEVO USUARIO-->
 
                     <div class="new-user">
-                        <a href="create_user.php"><button>Agregar Taller<i class="fa-solid fa-user-plus"></i></button></a>
+                        <a href="create_taller.php"><button>Agregar Taller<i class="fa-solid fa-user-plus"></i></button></a>
                     </div>
                 
             <!------------------------------------------------------------------------------------------------->
@@ -233,7 +233,7 @@ session_start();
 
                         <td class="buttons">
                             <div class="mod edit"><a href="../controladores/controlador_edit_user.php?id=<?php echo $rowSql['id']?>"><i class="fa-solid fa-pen-to-square"></i></a></div>
-                            <div class="mod delete"><a href="../controladores/controlador_delete_user.php?id=<?php echo $rowSql['id']?>"><i class="fa-solid fa-trash"></i></a></div>
+                            <div class="mod delete"><a href="../controladores/controlador_delete_taller.php?id=<?php echo $rowSql['id']?>"><i class="fa-solid fa-trash"></i></a></div>
                         </td>
                     </tr>
                

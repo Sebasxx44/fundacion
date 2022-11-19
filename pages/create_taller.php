@@ -102,7 +102,7 @@ session_start();
     <?php include_once("../controladores/controlador_save.php")?>
     <div class="card">
 
-        <form  class="form-create_user"action="../controladores/controlador_save.php" method="POST">
+        <form  class="form-create_user"action="../controladores/controlador_save.php" method="POST" enctype="multipart/form-data">
 
     <div class="card-create_user-content">
         <div class="lado_derecho ">
@@ -113,13 +113,8 @@ session_start();
             </div>
 
             <div class="form-group">
-                <h1>Tipo de documento</h1>
-                <input type="text" name="type_document" placeholder="Tipo de documento" class="form-document-type">
-            </div>
-
-            <div class="form-group">
-                <h1>Numero de documento</h1>
-                <input type="text" name="number_document" placeholder="Numero de documento" class="form-document-number">
+                <h1>Creado Por</h1>
+                <input type="text" name="created_for" placeholder="Creado Por" class="form-document-type">
             </div>
 
             <div class="form-group">
@@ -128,8 +123,8 @@ session_start();
             </div>
 
             <div class="form-group">
-                <h1>Fecha de nacimiento</h1>
-                <input type="text" name="date_of_birth" placeholder="Fecha de nacimiento" class="form-date_of_birth">
+                <h1>Participantes</h1>
+                <input type="text" name="participantes" placeholder="Participantes" class="form-region">
             </div>
 
         </div>
@@ -139,28 +134,23 @@ session_start();
 
 
             <div class="form-group">
-                <h1>Genero</h1>
-                <input type="text" name="gender" placeholder="Genero" class="form-gender">
+                <h1>Añadir informe</h1>
+                <input type="file" name="report" class="form-gender">
             </div>
 
             <div class="form-group">
-                <h1>Email</h1>
-                <input type="text" name="email" placeholder="Email" class="form-email">
+                <h1>Añadir lista de asistencia</h1>
+                <input type="file" name="attendance" class="form-email">
             </div>
 
             <div class="form-group">
-                <h1>Contacto</h1>
-                <input type="text" name="contact" placeholder="Numero de contacto" class="form-contact">
+                <h1>Añadir Acta</h1>
+                <input type="file" name="record" class="form-contact">
             </div>
 
             <div class="form-group">
-                <h1>Contraseña</h1>
-                <input type="text" name="password" placeholder="password" class="form-password">
-            </div>
-
-            <div class="form-group">
-                <h1>Role</h1>
-                <input type="text" name="role" placeholder="role - 1 [Administrador] , 2 [Tallerista]" class="form-password">
+                <h1>Añadir descripción</h1>
+                <input type="text" name="description" placeholder=" Añade una breve descripción sobre el taller realizado" class="form-contact">
             </div>
 
         </div>
@@ -168,7 +158,7 @@ session_start();
 
             <!-- Input que va a accionar el metodo post para hacer el guardado en la base de datos-->
 
-            <input type="submit" class="button-save-user" name="save_user" value="Confirmar">
+            <input type="submit" class="button-save-user" name="save_taller" value="Confirmar">
 
         </form>
     </div>
