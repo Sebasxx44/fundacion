@@ -90,7 +90,7 @@ include_once("../includes/header.php");
 
             <div class="form-group">
                 <h1>Nombre</h1>
-                <input type="text" name="name" placeholder="Nombre" class="form-name" autofocus>
+                <input type="text" name="name_taller" placeholder="Nombre" class="form-name" autofocus>
             </div>
 
             <div class="form-group">

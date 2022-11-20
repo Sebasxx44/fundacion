@@ -42,7 +42,7 @@ if (isset($_POST['update'])){
 if (isset($_POST['update_taller'])){
     
     $id = $_GET['id'];
-    $name = $_POST['name'];
+    $name = $_POST['name_taller'];
     $created_for = $_POST['created_for'];
     $region = $_POST['region'];
     $participantes = $_POST['participantes'];
@@ -50,7 +50,7 @@ if (isset($_POST['update_taller'])){
 
     // Creo la consulta a la base de datos para hacer el update a los campos que le estan mandando.
 
-    $query = "UPDATE talleres SET name = '$name', created_for = '$created_for', region = '$region',
+    $query = "UPDATE talleres SET name_taller = '$name', created_for = '$created_for', region = '$region',
     participantes = '$participantes', description = '$description' WHERE id = $id";
     $resultado = mysqli_query($conn, $query);
 
