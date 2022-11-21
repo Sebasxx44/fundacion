@@ -76,8 +76,10 @@ include_once("../includes/header.php");
         <!------------------------------------------------------------------------------------------------->
 
             <?php
+
             if (!isset($_POST['buscar'])){
                 $_POST['buscar'] = '';}
+
             ?>
 
     <div class="container-filters">
@@ -127,7 +129,9 @@ include_once("../includes/header.php");
                         <!-- BUSCADOR-->
                 
                         <div class="search">
+
                             <input type="text" class="form-control" id="buscar" name="buscar" placeholder="Buscar nombre del tallerista" value="<?php echo $_POST["buscar"] ?>" >
+
                         </div>
 
             </div>

@@ -84,7 +84,9 @@ if (isset($_GET['id'])){
 
         $row = mysqli_fetch_array($result);
 
+
         $name = $row['name_taller'];
+
         $created_for = $row['created_for'];
         $region = $row['region'];
         $participantes = $row['participantes'];
@@ -110,7 +112,9 @@ if (isset($_GET['id'])){
 
             <div class="form-group">
                 <h1>Nombre</h1>
+
                 <input type="text" name="name_taller" placeholder="Nombre" class="form-name" value="<?php echo $name?>">
+
             </div>
 
             <div class="form-group">

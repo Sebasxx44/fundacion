@@ -1,6 +1,8 @@
 <?php 
 
+
 include_once('databases/db.php');
+
 
 session_start();
 
@@ -19,11 +21,12 @@ if(!empty($_POST["btn-login"])){
 
     if ($datos = $sql ->fetch_object()){
 
+
         $_SESSION['id'] = $datos -> id;
         $_SESSION['email'] = $datos -> email;
         $_SESSION['name'] = $datos ->name;
 
-        
+
 
         if($rows['role'] == 1){
             header('Location: index.php');
