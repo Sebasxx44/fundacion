@@ -1,10 +1,10 @@
-<?php include('databases/db.php');
+<?php 
+
+include_once('databases/db.php');
 
 session_start();
-?>
 
 
-<?php
 
 
 if(!empty($_POST["btn-login"])){
@@ -23,10 +23,8 @@ if(!empty($_POST["btn-login"])){
     if ($datos = $sql ->fetch_object()){
 
         $_SESSION['id'] = $datos ->id;
-        $_SESSION['contacto'] = $datos ->contact;
         $_SESSION['email'] = $datos -> email;
         $_SESSION['name'] = $datos ->name;
-        $_SESSION['documento'] = $datos -> number_document;
 
         if($rows['role'] == 1){
             header('Location: index.php');

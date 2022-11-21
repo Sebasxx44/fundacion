@@ -1,31 +1,8 @@
-<?php include('../databases/db.php'); ?>
-
 <?php 
-session_start();
+include_once("../databases/db.php"); 
+include_once("../includes/header.php");
+
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Libreria para iconos-->
-    <script src="https://kit.fontawesome.com/1ec3c59459.js" crossorigin="anonymous"></script>
-    <!-- Libreria para Alertas-->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <!-- Link del archivo CSS-->
-    <link rel="stylesheet" href="../css/style.css">
-    <!-- Link para importar fuentes de google-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- Logo de la aplicación-->
-    <link rel="shortcut icon" href="../img/LOGO_TDV.png">
-
-    <title>Taller de vida</title>
-</head>
-<body>
 
 
 <!-- Navegador de la aplicacion-->
@@ -124,37 +101,6 @@ if (isset($_GET['id'])){
 
 }
 
-// Si existe el update (que viene desde el boton confirmar cambios, si existe le asigno a las variables
-// el valor que se esta editando)
-
-if (isset($_POST['update'])){
-    $id = $_GET['id'];
-    $name = $_POST['name'];
-    $type_document = $_POST['type_document'];
-    $number_document = $_POST['number_document'];
-    $region = $_POST['region'];
-    $date_of_birth = $_POST['date_of_birth'];
-    $gender = $_POST['gender'];
-    $email = $_POST['email'];
-    $contact = $_POST['contact'];
-    $password = $_POST['password'];
-    //$role = $_POST['role'];
-    $state = $_POST['state'];
-
-
-    // Creo la consulta a la base de datos para hacer el update a los campos que le estan mandando.
-
-    $query = "UPDATE users SET name = '$name', type_document = '$type_document', number_document = '$number_document',
-    region = '$region', date_of_birth = '$date_of_birth', gender = '$gender', email = '$email', contact = '$contact', password = '$password', /* role = '$role'*/ state = '$state' WHERE id = $id";
-    $result = mysqli_query($conn, $query);
-
-    
-    //Si el update se realizo correctamente, se envia al usuario a la tabla de los usuarios
-
-    header('Location: ../pages/users.php');
-
-}
-
 ?>
 
 
@@ -166,7 +112,7 @@ if (isset($_POST['update'])){
 
     <!-- Creo un formulario que va a contener todos los inputs en donde se va a editar la información-->
 
-        <form  class="form-create_user" action="?id=<?php echo $_GET['id']; ?>" method="POST">
+        <form  class="form-create_user" action="../controladores/controlador_edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
 
         <div class="card-create_user-content">
         <div class="lado_derecho ">
@@ -238,6 +184,7 @@ if (isset($_POST['update'])){
         </form>
     </div>
 </div>
+</section>
 
 
 <script src="../js/js.js"></script>

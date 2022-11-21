@@ -1,0 +1,33 @@
+
+<table class="content-table">
+
+                   
+<thead class=>    
+    <tr>
+    <th>NOMBRE</th>
+    <th>TIPO DE DOCUMENTO</th>
+    <th>NUMERO DE DOCUMENTO</th>
+    <th>REGION</th>
+    <th>GENERO</th>
+    <th>EMAIL</th>
+    <th>CONTACTO</th>
+    <th>ROL</th>
+
+    </tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>root</td>
+<td>CC</td>
+<td>1004790076</td>
+<td>Pereira</td>
+<td>Male</td>
+<td>sanchez@gmail.com</td>
+<td>3103849781</td>
+<td>Administrador</td>
+
+</tr>
+
+
