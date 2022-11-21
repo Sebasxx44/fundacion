@@ -5,6 +5,7 @@
 
 
 if (isset($_POST['update'])){
+
     $id = $_GET['id'];
     $name = $_POST['name'];
     $type_document = $_POST['type_document'];
@@ -54,7 +55,8 @@ if (isset($_POST['update_taller'])){
     participantes = '$participantes', description = '$description' WHERE id = $id";
     $resultado = mysqli_query($conn, $query);
 
-    //Si el update se realizo correctamenteEE, se envia al usuario a la tabla de los usuarios
+    //Si el update se realizo correctamente, se envia al usuario a la tabla de los usuarios
+
 
     header('Location: ../pages/talleres.php');
 

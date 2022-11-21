@@ -76,7 +76,10 @@ include_once("../includes/header.php");
         <!------------------------------------------------------------------------------------------------->
 
             <?php
-            if (!isset($_POST['buscar'])){$_POST['buscar'] = '';}
+
+            if (!isset($_POST['buscar'])){
+                $_POST['buscar'] = '';}
+
             ?>
 
     <div class="container-filters">
@@ -126,7 +129,9 @@ include_once("../includes/header.php");
                         <!-- BUSCADOR-->
                 
                         <div class="search">
-                            <input type="text" class="form-control" id="buscar" name="buscar" placeholder="Buscar Nombre" value="<?php echo $_POST["buscar"] ?>" >
+
+                            <input type="text" class="form-control" id="buscar" name="buscar" placeholder="Buscar nombre del tallerista" value="<?php echo $_POST["buscar"] ?>" >
+
                         </div>
 
             </div>
@@ -237,7 +242,7 @@ include_once("../includes/header.php");
                         <td><?php echo $rowSql["role"]; ?></td>
                         <td><?php echo $rowSql["state"]; ?></td>
 
-                        <!-- BOTONES DE EDITAR Y ELIMINAR USURARIO -->
+                        <!-- BOTONES DE EDITAR Y ELIMINAR USUARIO -->
 
                         <td class="buttons">
                             <div class="mod edit"><a href="edit_user.php?id=<?php echo $rowSql['id']?>"><i class="fa-solid fa-pen-to-square"></i></a></div>
@@ -252,5 +257,4 @@ include_once("../includes/header.php");
 </section>
 
 <script src="../js/js.js"></script>
-
 <?php include("../includes/footer.php");?>

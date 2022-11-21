@@ -52,7 +52,9 @@ if (isset($_POST['save_user'])){
 
 if (isset($_POST['save_taller'])){
 
-     $name = $_POST['name'];
+
+     $name = $_POST['name_taller'];
+
      $created_for = $_POST['created_for'];
      $region = $_POST['region'];
      $participantes = $_POST['participantes'];
@@ -74,7 +76,9 @@ if (isset($_POST['save_taller'])){
         $record = '../public/record/'.$_FILES['record']['name'];
     }
 
-    $query = "INSERT INTO talleres(name,created_for,region,participantes,description,report,attendance,record) 
+
+    $query = "INSERT INTO talleres(name_taller,created_for,region,participantes,description,report,attendance,record) 
+
     VALUES ('$name','$created_for','$region','$participantes','$description','$report','$attendance','$record')";
 
     $result = mysqli_query($conn,$query);

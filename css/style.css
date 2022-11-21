@@ -294,6 +294,104 @@ nav.close ~ .dashboard .top{
 #check:checked ~ .nav-menu li{
     display: block;
 }
+/* ---------------------------------------------------------------------------------------------------*/
+
+                                        /* SESION DEl PROFILE */
+
+.container_profile{
+    height: 90vh;
+    margin-top: 60px;
+    margin-left: 5px;
+    padding: 10px;
+    font-family:poppins;
+}
+
+
+/* ESTILOS DEL TITULO DEL MENU PERFIL*/
+
+
+.container_profile .title_profile{
+    padding: 10px;
+    text-align: center;
+}
+
+.container_profile .title_profile h1{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+
+/* ESTILOS DEL CONTENEDOR DE INFORMACIÓN BASICA DEL MENU PERFIL*/
+
+
+.container_profile .basic_information{
+    height: 50vh;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+.title_information{
+    height: 8vh;
+    padding: 10px;
+}
+
+.title_information h1{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.style_basic{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 10px;
+    border-bottom: 1px solid rgb(197, 197, 197) ;
+    margin-left: 20px;
+}
+
+.style_basic h1{
+    font-size: 15px;
+    font-weight: 300;
+    color: #424242;
+}
+
+.photo_basic_information img{
+   width: 50px;
+   border-radius: 50%;
+}
+
+.gender_basic_information{
+    border: none;
+}
+
+/* INFORMACIÓN DE CONTACTO*/
+
+.container_profile .contact_information{
+    height: 28vh;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+.telephone_contact_information{
+    border: none;
+}
+
+/* INFORMACIÓN PERSONAL*/
+
+
+.container_profile .private_information{
+    height: 28vh;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 5px;
+}
+
 
 
 /* ---------------------------------------------------------------------------------------------------*/
@@ -517,7 +615,7 @@ p.encontrados{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.content-table {
+.content-table{
    border-collapse: collapse;
     font-size: 13px;
     font-family: poppins;
@@ -708,6 +806,192 @@ input:focus{
     background-color: #025242;
     
 }
+
+
+/*---------------------------------------------------------------------------------------------------------*/
+
+                                                /*SESION VISUALIZAR TALLER*/
+
+
+                                            /*ESTILOS DEL CONTENEDOR PRINCIPAL*/
+
+.container_visualizar_talleres{
+    width: 99,5%;
+    height: 92.3vh;
+    margin-top: 55px;
+    margin-left: 5px;
+    font-family: poppins;
+}
+
+                                            /*ESTILOS DE LOS SUB-CONTENEDORES */
+
+.container_visualizar_talleres .first-section{
+    height: 35vh;
+    overflow: auto;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.container_visualizar_talleres .second-section{
+    height: 35vh;
+    padding: 10px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+
+}
+
+.container_visualizar_talleres .third-section{
+    height: 22.3vh;
+    padding: 10px;
+}
+
+                                    /*ESTILOS DE LAS SECCIONES DEL PRIMER CONTENEDOR*/
+
+.first-section .title{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
+.first-section .title h1{
+    font-size: 45px;
+}
+
+                                        /*ESTILOS DE LA TABLA DEL PRIMER CONTENEDOR*/
+
+
+.first-section .table{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+}
+
+.first-section .table img{
+    width: 150px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.table-visualizar{
+     border-collapse: collapse;
+     font-size: 18px;
+     font-family: poppins;
+     width: 70%;
+     border-radius: 5px 5px 0 0;
+     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+     margin-top: 4px;
+     margin-left: 20px;
+ }
+ 
+ .table-visualizar thead{
+     height: 8vh;
+     padding: 20px;
+     width: 10%;
+    border-bottom: 1px solid rgb(230, 230, 230);
+
+     
+ }
+ 
+ .table-visualizar thead tr{
+     color: rgb(0, 0, 0);
+ }
+ 
+ .table-visualizar th, .table-visualizar td{
+     padding: 10px 10px;
+     font-weight: 500;
+     text-align: center;
+
+ }
+
+/*---------------------------------------------------------------------------------------------------------*/
+                                                    /*ESTILOS DE LOS COLABORADORES*/
+ 
+
+.first-section .colaboradores{
+    height: 4.5vh;
+}
+
+.first-section .colaboradores h1{
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+                                        /*ESTILOS DE LA SECCION ARCHIVOS DE LA SEGUNDA SECCION*/
+
+
+.second-section .archivos{
+    width: 50%;
+    display: flex;
+    gap: 40px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.second-section .archivos .arc{
+    display: flex;
+    gap: 5px;
+}
+
+.second-section .archivos .arc h1{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.second-section .archivos .arc img{
+    width: 30px;
+}
+
+                                        /*ESTILOS DE LA SECCION DESCRIPCION DE LA SEGUNDA SECCION*/
+
+.second-section .description{
+    margin-top: 20px;
+}
+
+.description .title-description{
+    padding: 10px;
+    width: 20%;
+}
+
+.description .title-description h1{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.description .text-description{
+    padding: 10px;
+}
+
+.description .text-description h1{
+    font-size: 18px;
+    font-weight: 350;
+}
+
+                                            /*ESTILOS DE LA SESION FOTOGRAFIAS DE LA TERCERA SESION*/
+
+
+.third-section .images .title-images{
+    width: 20%;
+    height: 6vh;
+    padding: 5px;
+}
+
+.images .title-images h1{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.images .fotografias{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 15vh;
+    padding: 10px;
+    width: 100%;
+}
+
+.images .fotografias img{
+    width: 120px;
+    border-radius: 5px;
+}
+
 
 /*---------------------------------------------------------------------------------------------------------*/
 
