@@ -31,7 +31,7 @@ $SQL="SELECT users.id, users.name, users.type_document, users.number_document, u
 users.email, users.contact, roles.role FROM users LEFT JOIN roles ON users.role = roles.id ";
 $dato = mysqli_query($conn, $SQL);
 
-if($dato -> num_rows >0){
+if($dato -> num_rows > 0){
 while($fila=mysqli_fetch_array($dato)){
 
 ?>

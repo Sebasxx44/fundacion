@@ -11,6 +11,7 @@ if (isset($_GET['id'])){
     if (!$result){
         die('Query Failed');
     }
+    
 
     header("Location: ../pages/users.php");
 }

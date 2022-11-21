@@ -5,6 +5,7 @@
 
 
 if (isset($_POST['update'])){
+    
     $id = $_GET['id'];
     $name = $_POST['name'];
     $type_document = $_POST['type_document'];

@@ -76,7 +76,8 @@ include_once("../includes/header.php");
         <!------------------------------------------------------------------------------------------------->
 
             <?php
-            if (!isset($_POST['buscar'])){$_POST['buscar'] = '';}
+            if (!isset($_POST['buscar'])){
+                $_POST['buscar'] = '';}
             ?>
 
     <div class="container-filters">

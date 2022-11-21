@@ -83,13 +83,14 @@ include_once("../includes/header.php");
     <?php include_once("../controladores/controlador_save.php")?>
     <div class="card">
 
-        <form  class="form-create_user"action="../controladores/controlador_save.php" method="POST" enctype="multipart/form-data">
+        <form  class="form-create_user" action="../controladores/controlador_save.php" method="POST" enctype="multipart/form-data">
 
     <div class="card-create_user-content">
         <div class="lado_derecho ">
 
             <div class="form-group">
                 <h1>Nombre</h1>
+            
                 <input type="text" name="name_taller" placeholder="Nombre" class="form-name" autofocus>
             </div>
 

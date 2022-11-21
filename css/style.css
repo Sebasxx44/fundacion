@@ -294,6 +294,104 @@ nav.close ~ .dashboard .top{
 #check:checked ~ .nav-menu li{
     display: block;
 }
+/* ---------------------------------------------------------------------------------------------------*/
+
+                                        /* SESION DEl PROFILE */
+
+.container_profile{
+    height: 90vh;
+    margin-top: 60px;
+    margin-left: 5px;
+    padding: 10px;
+    font-family:poppins;
+}
+
+
+/* ESTILOS DEL TITULO DEL MENU PERFIL*/
+
+
+.container_profile .title_profile{
+    padding: 10px;
+    text-align: center;
+}
+
+.container_profile .title_profile h1{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+
+/* ESTILOS DEL CONTENEDOR DE INFORMACIÓN BASICA DEL MENU PERFIL*/
+
+
+.container_profile .basic_information{
+    height: 50vh;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+.title_information{
+    height: 8vh;
+    padding: 10px;
+}
+
+.title_information h1{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.style_basic{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 10px;
+    border-bottom: 1px solid rgb(197, 197, 197) ;
+    margin-left: 20px;
+}
+
+.style_basic h1{
+    font-size: 15px;
+    font-weight: 300;
+    color: #424242;
+}
+
+.photo_basic_information img{
+   width: 50px;
+   border-radius: 50%;
+}
+
+.gender_basic_information{
+    border: none;
+}
+
+/* INFORMACIÓN DE CONTACTO*/
+
+.container_profile .contact_information{
+    height: 28vh;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+.telephone_contact_information{
+    border: none;
+}
+
+/* INFORMACIÓN PERSONAL*/
+
+
+.container_profile .private_information{
+    height: 28vh;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 5px;
+}
+
 
 
 /* ---------------------------------------------------------------------------------------------------*/
@@ -769,24 +867,27 @@ input:focus{
 .first-section .table img{
     width: 150px;
     margin-left: 10px;
+    border-radius: 5px;
 }
 
 .table-visualizar{
      border-collapse: collapse;
-     font-size: 20px;
+     font-size: 18px;
      font-family: poppins;
      width: 70%;
      border-radius: 5px 5px 0 0;
      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
      margin-top: 4px;
-     margin-left: 0.5%;
+     margin-left: 20px;
  }
  
  .table-visualizar thead{
      height: 8vh;
      padding: 20px;
      width: 10%;
-     background-color: #000000;
+    border-bottom: 1px solid rgb(230, 230, 230);
+
+     
  }
  
  .table-visualizar thead tr{
@@ -809,7 +910,7 @@ input:focus{
 }
 
 .first-section .colaboradores h1{
-    font-weight: 300;
+    font-weight: 400;
     margin-left: 10px;
 }
 
@@ -881,13 +982,14 @@ input:focus{
     display: flex;
     align-items: center;
     gap: 15px;
-    height: 16.3vh;
+    height: 15vh;
     padding: 10px;
     width: 100%;
 }
 
 .images .fotografias img{
     width: 120px;
+    border-radius: 5px;
 }
 
 
