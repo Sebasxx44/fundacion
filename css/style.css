@@ -205,6 +205,42 @@ nav.close ~ .dashboard .top{
 }
 
 
+/*---------------------------------------------------------------------------------------------------------*/
+                            /*ESTILOS DEL NAVBAR DE LOS USUARIOS TALLERISTAS*/
+
+
+.top_users{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 55px;
+    align-items: center;
+    transition: all 300ms ease;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.top_users .logo_app{
+    margin-left: 20px;
+}
+
+.top_users .logo_app img{
+    width: 60px;
+}
+
+.top_users .anterior{
+    width: 40px;
+    padding: 5px;
+    margin-left: 20px;
+
+}
+
+.top_users .anterior a i{
+    font-size: 25px;
+    color: #000;
+}
+
+
                                         /*ESTILOS DEL MENU DESPEGABLE*/
 
 
@@ -222,8 +258,6 @@ nav.close ~ .dashboard .top{
     z-index: 1;
     font-family: poppins;
 }
-
-
 
 .img-correo h1{
     width: 90%;
@@ -259,7 +293,7 @@ nav.close ~ .dashboard .top{
     color: white;
     text-transform: uppercase;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 18px;
     color: rgb(77, 77, 77);
 }
 
@@ -294,6 +328,106 @@ nav.close ~ .dashboard .top{
 #check:checked ~ .nav-menu li{
     display: block;
 }
+
+/* ---------------------------------------------------------------------------------------*/
+
+                            /* SECCION IMG-PROFILE DE LOS USUARIOS TALLERITAS */
+
+.top_users .img-profile{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-profile label{
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+
+}
+
+.img-profile label h3{
+    font-size: 15px;
+    font-family: poppins;
+    font-weight: 400;
+}
+
+.img-profile label img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+
+                            /* ESTILOS DEL MENU DESPLEGABLE  */
+
+
+.nav-menu_users{
+    position: fixed;
+    width: 235px;
+    top: 70px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    transition: all 0.2s;
+    z-index: 1;
+    font-family: poppins;
+    margin-right: 30px;
+    transition: all 300ms ease;
+
+}
+
+.nav-menu_users li{
+    display: none;
+    line-height: 20px;
+    margin: 25px 0px;
+    transition: all 300ms ease;
+}
+
+.nav-menu_users .img-correo{
+    padding-top: 10px;
+    margin-top: 0px;
+    height: 62px;
+    border-bottom: 1px solid rgb(233, 233, 233) ;
+}
+
+.nav-menu_users li img{
+    width: 45px;
+    float: left;
+    border-radius: 50%;
+    margin-left: 3px;
+}
+
+
+.nav-menu_users li a{
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgb(77, 77, 77);
+    gap: 10px;
+}
+
+.nav-menu_users li a i{
+    font-size: 15px;
+    color: #5f5f5f;
+    margin-right: 3px;
+}
+
+
+#check:checked ~ .nav-menu_users{
+    height: 25vh;
+    transition: all 300ms ease;
+
+}
+
+#check:checked ~ .nav-menu_users li{
+    display: block;
+}
+
 /* ---------------------------------------------------------------------------------------------------*/
 
                                         /* SESION DEl PROFILE */
@@ -325,7 +459,7 @@ nav.close ~ .dashboard .top{
 
 
 .container_profile .basic_information{
-    height: 50vh;
+    height: 60vh;
     border: 1px solid rgb(202, 200, 200);
     border-radius: 10px;
     margin-top: 30px;
@@ -353,7 +487,7 @@ nav.close ~ .dashboard .top{
 }
 
 .style_basic h1{
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 300;
     color: #424242;
 }
@@ -363,7 +497,7 @@ nav.close ~ .dashboard .top{
    border-radius: 50%;
 }
 
-.gender_basic_information{
+.region_basic_information{
     border: none;
 }
 
@@ -373,7 +507,7 @@ nav.close ~ .dashboard .top{
     height: 28vh;
     border: 1px solid rgb(202, 200, 200);
     border-radius: 10px;
-    margin-top: 30px;
+    margin-top: 40px;
     padding: 5px;
 }
 
@@ -385,6 +519,56 @@ nav.close ~ .dashboard .top{
 
 
 .container_profile .private_information{
+    height: 28vh;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+
+.container_profile_users{
+    margin-left: 5px;
+    padding: 10px;
+    font-family:poppins;
+    margin-top: 5px;
+}
+
+
+/* ESTILOS DEL TITULO DEL MENU PERFIL*/
+
+
+.container_profile_users .title_profile{
+    padding: 10px;
+    text-align: center;
+}
+
+.container_profile_users .title_profile h1{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+/* ESTILOS DEL CONTENEDOR DE INFORMACIÓN BASICA DEL MENU PERFIL*/
+
+
+.container_profile_users .basic_information{
+    height: 60vh;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+.container_profile_users .contact_information{
+    height: 28vh;
+    border: 1px solid rgb(202, 200, 200);
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 5px;
+}
+
+.container_profile_users .private_information{
     height: 28vh;
     border: 1px solid rgb(202, 200, 200);
     border-radius: 10px;
@@ -408,10 +592,11 @@ nav.close ~ .dashboard .top{
     width: 99.5%;
     margin: auto;
     border-radius: 5px;
-    margin-top: 60px;
+    margin-top: 70px;
     font-family: poppins;
 
 }
+
 
 .container-filters form{
     display: flex;
@@ -444,6 +629,12 @@ nav.close ~ .dashboard .top{
     text-align: center;
 }
 
+.container-filters_users .new-user{
+    padding-top: 80px;
+    width: 33.3%;
+    text-align: center;
+}
+
 .new-user button{
     width: 95%;
     padding: 15px;
@@ -456,7 +647,6 @@ nav.close ~ .dashboard .top{
     background-color: #009879;
     color: white;
     margin-left: 5%;
-    margin-top: 10px;
     font-family: poppins;
 
 }
@@ -501,8 +691,9 @@ nav.close ~ .dashboard .top{
     width: 100px;
     font-family: poppins;
     cursor: pointer;
-
  }
+
+
 
  .container-filters select option{
     font-size: 14px;
@@ -510,8 +701,6 @@ nav.close ~ .dashboard .top{
     font-family: poppins;
     cursor: pointer;
  }
-
-
 
 
 /* Buscador*/
@@ -594,6 +783,173 @@ p.encontrados{
     font-family: poppins;
     margin-left:10px;
     margin-top: 20px;
+
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------------------*/
+
+                                /* ESTILOS DE LOS FILTROS DE LOS USUARIOS TALLERISTAS*/
+
+.container-filters_users{
+    height: 310px;
+    width: 100%;
+    margin-top: 90px;
+    margin: auto;
+    border-radius: 5px;
+    font-family: poppins;
+
+}
+
+.container-filters_users form{
+    display: block;
+    padding: 5px;
+    align-items: center;
+    font-family: poppins;
+    margin-top: 70px;
+    padding: 20px;
+    height: 170px;
+}
+
+.container-filters_users .container-filters-left{
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    align-items: center;
+    font-family: poppins;
+    justify-content: center;
+}
+
+.container-filters_users .container-filters-right{
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    align-items: center;
+    font-family: poppins;
+    justify-content: center;
+
+}
+
+ .container-filters_users .new-user{
+    padding-top: 60px;
+    width: 33.3%;
+    text-align: center;
+}
+
+ .container-filters_users .region_users{
+    width: 15%;
+    padding: 10px;
+}
+
+.container-filters_users .region_users h1{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+.container-filters_users select{
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 4px;
+    width: 100px;
+    font-family: poppins;
+    cursor: pointer;
+ }
+
+.container-filters_users .calendario{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: space-around;
+    margin-left: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 10px;
+    height: 40px;
+}
+
+.container-filters_users .calendario h1{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container-filters_users .calendario img{
+    width: 30px;
+}
+
+
+.container-filters_users .reports{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-filters_users .reports img{
+    width: 35px;
+    margin-top: 5px;
+}
+
+.search{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 5;
+}
+
+.search input{
+    padding: 15px;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 10px;
+    border: none;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    background-color: rgb(252, 252, 252);
+    font-family: poppins;
+
+}
+
+.search input:focus{
+    outline-width: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+form .boton_busqueda{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.boton_busqueda input{
+    padding: 10px;
+    width: 100px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 10px;
+    border: none;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    background-color: white;
+    transition: all 500ms ease;
+    cursor: pointer;
+    font-family: poppins;
+
+}
+
+.boton_busqueda input:hover{
+    background-color: #009879;
+    color: white;
+}
+
+p.encontrados_users{
+    font-size: 18px;
+    color: #025242;
+    font-family: poppins;
+    margin-left:20px;
 
 }
 
@@ -713,6 +1069,23 @@ p.encontrados{
         border-radius: 131px;
     }
 
+
+
+/* --------------------------------------------------------------------------------------------------*/
+                                    /*CONTENEDOR TABLE USERS TALLERISTAS */
+
+    .container-table_users{
+        height: 42vh;
+        background-color: #ffffff;
+        width: 99%;
+        margin-left: 1%;
+        padding: 5px;
+        margin-top: 5px;
+        overflow: auto;
+        border-radius: 10px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
 /* ----------------------------------------------------------------------------------------------------------*/
 
 
@@ -808,6 +1181,28 @@ input:focus{
 }
 
 
+
+
+.container-create-user_users{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 86vh;
+    font-family: poppins;
+}
+
+.container-create-user_users .card{
+    background-color: rgb(241, 241, 241);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding: 10px;
+    text-align: center;
+    width: 95%;
+    height: 98%;
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+
 /*---------------------------------------------------------------------------------------------------------*/
 
                                                 /*SESION VISUALIZAR TALLER*/
@@ -853,6 +1248,7 @@ input:focus{
 
 .first-section .title h1{
     font-size: 45px;
+    font-weight: 300;
 }
 
                                         /*ESTILOS DE LA TABLA DEL PRIMER CONTENEDOR*/
@@ -990,6 +1386,35 @@ input:focus{
 .images .fotografias img{
     width: 120px;
     border-radius: 5px;
+}
+
+
+
+.container_visualizar_talleres_users{
+    width: 99,5%;
+    height: 92.3vh;
+    margin-left: 5px;
+    font-family: poppins;
+}
+
+
+.container_visualizar_talleres_users .first-section{
+    height: 35vh;
+    overflow: auto;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    padding-top: 55px;
+}
+
+.container_visualizar_talleres_users .second-section{
+    height: 35vh;
+    padding: 10px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+
+}
+
+.container_visualizar_talleres_users .third-section{
+    height: 22.3vh;
+    padding: 10px;
 }
 
 

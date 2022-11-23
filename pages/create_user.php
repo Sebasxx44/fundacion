@@ -30,11 +30,6 @@ include_once("../includes/header.php");
                     <span class="link-name">Talleres</span>
                 </a></li>
 
-                <li><a href="#">
-                    <i class="fa-solid fa-download"></i>
-                    <span class="link-name">Reportes</span>
-                </a></li>
-
             </ul>
 
             <ul class="logout">

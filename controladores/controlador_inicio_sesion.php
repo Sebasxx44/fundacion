@@ -14,16 +14,21 @@ if(!empty($_POST["btn-login"])){
     $query = "select * from users where name = '$name' and password = '$password'";
     $result = mysqli_query($conn,$query);
     $rows = mysqli_fetch_array($result);
+
     $sql = $conn -> query("select * from users where name = '$name' and password = '$password'");
-    
 
     if ($datos = $sql ->fetch_object()){
 
         $_SESSION['id'] = $datos -> id;
         $_SESSION['email'] = $datos -> email;
         $_SESSION['name'] = $datos ->name;
+        $_SESSION['type_document'] = $datos ->type_document;
+        $_SESSION['number_document'] = $datos ->number_document;
+        $_SESSION['region'] = $datos ->region;
+        $_SESSION['gender'] = $datos ->gender;
+        $_SESSION['contact'] = $datos ->contact;
+        $_SESSION['date_of_birth'] = $datos ->date_of_birth;
 
-        
 
         if($rows['role'] == 1){
             header('Location: index.php');

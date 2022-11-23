@@ -29,7 +29,7 @@ if (isset($_POST['update'])){
     
     //Si el update se realizo correctamente, se envia al usuario a la tabla de los usuarios
 
-    header('Location: ../pages/users.php');
+    header('Location: ../index.php');
 
 }
 

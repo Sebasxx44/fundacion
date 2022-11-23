@@ -20,7 +20,7 @@ include_once("../includes/header.php");
 
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="../pages/users.php">
+                <li><a href="../index.php">
                     <i class="fa-solid fa-users"></i>
                     <span class="link-name">Talleristas</span>
                 </a></li>
@@ -28,11 +28,6 @@ include_once("../includes/header.php");
                 <li><a href="">
                     <i class="fa-solid fa-book-open"></i>
                     <span class="link-name">Talleres</span>
-                </a></li>
-
-                <li><a href="reportes.php">
-                    <i class="fa-solid fa-download"></i>
-                    <span class="link-name">Reportes</span>
                 </a></li>
 
             </ul>
@@ -79,7 +74,7 @@ include_once("../includes/header.php");
             <!-- BOTON PARA AGREGAR UN NUEVO USUARIO-->
 
                     <div class="new-user">
-                        <a href="create_taller.php"><button>Agregar Taller<i class="fa-solid fa-user-plus"></i></button></a>
+                        <a href="create_taller_admin.php"><button>Agregar Taller<i class="fa-solid fa-user-plus"></i></button></a>
                     </div>
                 
             <!------------------------------------------------------------------------------------------------->
@@ -127,7 +122,7 @@ include_once("../includes/header.php");
             <!-- GENERADOR DE REPORTES EN EXCEL-->
                                         
                 <div class="reports">
-                    <a href="reportes/excel.php"><img src="../img/excel.png" alt=""></a>
+                    <a href="reportes/excel_talleres.php"><img src="../img/excel.png" alt=""></a>
                     <!-- <a href="reportes/pdf.php"><img src="../img/pdf.png" alt=""></a> -->
                 </div>
             </div>
