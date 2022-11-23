@@ -103,7 +103,9 @@ include_once("../includes/header.php");
                 <!-- BUSCADOR-->
                 
                     <div class="search">
+
                         <input type="text" class="form-control" id="buscar" name="buscar" placeholder="Buscar nombre del taller" value="<?php echo $_POST["buscar"] ?>" >
+
                     </div>
 
             </div>
@@ -150,7 +152,9 @@ include_once("../includes/header.php");
                     $query ="SELECT * FROM talleres ";
 
                 if ($_POST["buscar"] != '' ){ 
+
                     $query .= "WHERE (name_taller LIKE LOWER('%".$aKeyword[0]."%'))";
+
                 }
 
                 if (isset($_POST['region'])){
@@ -191,11 +195,13 @@ include_once("../includes/header.php");
 
             <tbody>
 
+
                 <?php While($rowSql = $sql->fetch_assoc()) {   ?>
                
                     <tr>
                         <td><a href="visualizar_taller.php?id=<?php echo $rowSql['id']?>"><img class="img_perfil" src="../img/foto-taller.jpg" ></a></td>
                         <td><?php echo $rowSql["name_taller"]; ?></td>
+
                         <td><?php echo $rowSql["created_for"]; ?></td>
                         <td><?php echo $rowSql["region"]; ?> </td>
                         <td><?php echo $rowSql["participantes"]; ?> </td>
@@ -218,5 +224,7 @@ include_once("../includes/header.php");
 
 
 <!---------------------------------------------------------------------------------------------------- -->
+
+
 
 <?php include("../includes/footer.php");?>

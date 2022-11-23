@@ -1,6 +1,8 @@
 <?php 
 
+
 include_once('databases/db.php');
+
 
 session_start();
 
@@ -18,6 +20,7 @@ if(!empty($_POST["btn-login"])){
     $sql = $conn -> query("select * from users where name = '$name' and password = '$password'");
 
     if ($datos = $sql ->fetch_object()){
+
 
         $_SESSION['id'] = $datos -> id;
         $_SESSION['email'] = $datos -> email;

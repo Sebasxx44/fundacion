@@ -1,6 +1,7 @@
 <?php 
 include_once("../databases/db.php"); 
 include_once("../includes/header.php");
+
 ?>
 
                                         <!-- Navegación -->
@@ -32,6 +33,11 @@ include_once("../includes/header.php");
                     <i class="fa-solid fa-download"></i>
                     <span class="link-name">Reportes</span>
                 </a></li>
+
+
+?>
+
+
 
             </ul>
 
