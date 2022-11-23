@@ -57,7 +57,7 @@ include_once("../includes/header.php");
                 <ul class="nav-menu">
                     <li class="img-correo"><a href="#"><img src="../img/unnamed.jpg" alt=""></a>
                         <h1><?php echo $_SESSION['name']?> </h1><h1><?php echo $_SESSION['email']?></h1></li>
-                    <li><a href="profile.php"> <i class="fa-solid fa-gear"></i> MI CUENTA</a></li>
+                    <li><a href="profile_admin.php"> <i class="fa-solid fa-gear"></i> MI CUENTA</a></li>
                 </ul>
             </div>
         </div>

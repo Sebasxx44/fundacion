@@ -19,7 +19,7 @@ include_once("../includes/header.php");
 
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="users.php">
+                <li><a href="../index.php">
                     <i class="fa-solid fa-users"></i>
                     <span class="link-name">Talleristas</span>
                 </a></li>
@@ -28,16 +28,6 @@ include_once("../includes/header.php");
                     <i class="fa-solid fa-book-open"></i>
                     <span class="link-name">Talleres</span>
                 </a></li>
-
-                <li><a href="reportes.php">
-                    <i class="fa-solid fa-download"></i>
-                    <span class="link-name">Reportes</span>
-                </a></li>
-
-
-?>
-
-
 
             </ul>
 
